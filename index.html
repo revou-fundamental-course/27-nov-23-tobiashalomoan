@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Calculator</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js/script.js"></script>
+   
+</head>
+<body onload="setUp()">
+    
+    <div class="header">Welcome to my Triangle Calculator!
+        <div id="subheader">This is a triangle area and perimeter calculator made by Tobias Agyasta Halomoan</div>
+    </div>
+    <h3 id="tri-fig">Triangle figure:</h3>
+    <div class = "triangle"> <img src="assets\triangle.jpg" alt="Triangle picture"></div>
+    <div class="tab">
+        <button class ="tablinks" onclick = "openState('area')" id = "default" >Area</button>
+        <button class ="tablinks" onclick = "openState('perimeter')">Perimeter</button>
+    </div>
+    <div class = "tabcontent" id = "area" >
+        <h3>Area Equation:</h3>
+        <img src = "assets\triangle area.png" alt = "Triangle area equation">
+        <div class = "eq-input">a (base) = <input type ="number" min="1" id = "a-input-area"></div>
+        <div class = "eq-input">h  (height)= <input type ="number" min="1" id = "h-input"></div>
+        <div id = "result-area"></div>
+        <button class = "submit-btn" onclick="areaCheck()">Submit</button>
+        <button class = "reset-btn" onclick="reset()">Reset</button>
+    </div>
+    <div class = "tabcontent" id = "perimeter">
+        <h3>Perimeter Equation : </h3>
+        <img src="assets/triangle perimeter.png" alt = "Triangle perimeter equation">
+        <div class = "eq-input">side a = <input type ="number" min="1" id = "a-input-perimeter"></div>
+        <div class = "eq-input">side b = <input type ="number" min="1" id = "b-input"></div>
+        <div class = "eq-input">side c = <input type ="number" min="1" id = "c-input"></div>
+        <div id = "result-perimeter"></div>
+        <button class = "submit-btn" onclick = "perimeterCheck()">Submit</button>
+        <button class = "reset-btn" onclick="reset()">Reset</button>
+    </div>
+</body>
+</html>
